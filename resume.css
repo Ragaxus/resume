@@ -1,0 +1,71 @@
+@font-face {
+ font-family: Roboto-Black;
+ src:url(fonts/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: Roboto-Regular;
+    font-size: medium;
+}
+
+h1 {
+font-family: Roboto-Black;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    font-size: small;
+}
+
+.title {
+    width: 450px;
+}
+
+.cols {
+    display: flex;
+}
+
+.col-left {
+    width: 450px;
+}
+
+.section-title {
+    font-size: small;
+    text-transform: uppercase;
+    color: lightseagreen
+}
+
+.experience > span:not(:last-child) {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.experience-info {
+    font-size: large;
+}
+
+.experience-title::after {
+    content: ","
+}
+
+.experience-description p {
+    text-indent: 1em;
+    font-size: small;
+}
+
+.education-description {
+    font-size: small;
+}
+
+.skills {
+    font-size: small;
+}
