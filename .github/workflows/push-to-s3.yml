@@ -12,6 +12,8 @@ jobs:
   push-to-s3:
       runs-on: ubuntu-latest
       steps:
+        - name: checkout current repo
+          uses: actions/checkout@v3
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:
@@ -19,4 +21,4 @@ jobs:
             role-duration-seconds: 900 # the ttl of the session, in seconds.
             aws-region: us-east-1 # use your region here.
         - name: Serverless deploy
-          run: aws s3 sync . s3://stavgold-resume/resume 
+          run: aws s3 sync resume/* s3://stavgold-resume/resume 
