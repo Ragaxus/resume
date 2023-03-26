@@ -14,6 +14,8 @@ jobs:
       steps:
         - name: checkout current repo
           uses: actions/checkout@v3
+          with:
+            path: resume
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:
@@ -21,4 +23,4 @@ jobs:
             role-duration-seconds: 900 # the ttl of the session, in seconds.
             aws-region: us-east-2 # use your region here.
         - name: Serverless deploy
-          run: aws s3 sync $(GITHUB_WORKSPACE)/resume/* s3://stavgold-resume/resume 
+          run: aws s3 sync resume s3://stavgold-resume/resume 
