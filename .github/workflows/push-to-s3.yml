@@ -1,0 +1,17 @@
+name: push-to-s3
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+permissions:
+  id-token: write # required to use OIDC authentication
+  contents: read # required to checkout the code from the repo
+jobs:
+  push-to-s3:
+      steps:
+        - name: configure aws credentials
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+            role-to-assume: arn:aws:iam::275502406073:role/github-actions-oidc 
+            role-duration-seconds: 900 # the ttl of the session, in seconds.
+            aws-region: us-east-1 # use your region here.
+        - name: Serverless deploy
+          run: aws s3 sync . s3://stavgold-resume/resume 
