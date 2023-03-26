@@ -19,6 +19,6 @@ jobs:
           with:
             role-to-assume: arn:aws:iam::275502406073:role/github-actions-oidc 
             role-duration-seconds: 900 # the ttl of the session, in seconds.
-            aws-region: us-east-1 # use your region here.
+            aws-region: us-east-2 # use your region here.
         - name: Serverless deploy
-          run: aws s3 sync resume/* s3://stavgold-resume/resume 
+          run: aws s3 sync $(GITHUB_WORKSPACE)/resume/* s3://stavgold-resume/resume 
