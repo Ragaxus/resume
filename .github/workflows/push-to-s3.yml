@@ -1,11 +1,16 @@
 name: push-to-s3
 run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 permissions:
   id-token: write # required to use OIDC authentication
   contents: read # required to checkout the code from the repo
 jobs:
   push-to-s3:
+      runs-on: ubuntu-latest
       steps:
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
