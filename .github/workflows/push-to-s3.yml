@@ -1,5 +1,5 @@
 name: push-to-s3
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: Push content to S3 bucket
 on:
   push:
     branches:
