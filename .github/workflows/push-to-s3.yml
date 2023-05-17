@@ -23,4 +23,4 @@ jobs:
             role-duration-seconds: 900 # the ttl of the session, in seconds.
             aws-region: us-east-2 # use your region here.
         - name: Serverless deploy
-          run: aws s3 sync resume s3://stavgold-resume/resume 
+          run: aws s3 sync resume s3://www.stav.gold/resume 
