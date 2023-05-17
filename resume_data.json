@@ -1,0 +1,59 @@
+{
+    "header": {
+        "applicant_name": "Stav Gold",
+        "contact_info": [
+            "stav.r.gold[at]gmail.com"
+        ],
+        "summary": "An affable and analytical engineer with years of success in using legacy code bases to deliver quality software."
+    },
+    "experience": [{
+            "org_name": "CUNA Mutual",
+            "title": "Business System Consultant",
+            "timespan": "February 2021 - Present",
+            "description": [
+                "Support human resources and regulatory compliance functions at a large insurance company.",
+                "Facilitate and modernize ETL of payroll and personnel data to internal and external vended systems.",
+                "Introduced modern development practices to a mature enterprise team; learned how to write cloud-native code and deploy it to Azure by spearheading the team's first-ever such deployment, then trained the rest of the team."
+            ]
+        },
+        {
+            "org_name": "Epic Systems Corp",
+            "title": "Software Developer",
+            "timespan": "March 2016 - February 2021",
+            "description": [
+                "Built and maintained a database integration between a Finnish healthcare organization and the Finnish national government's patient health information database, in accordance with that nation's regulatory requirements and consultant feedback: grew a strong knowledge of XML.",
+                "Collaborated with developers within the team and without to ensure that the existing legacy system did not experience regressions while also meeting the needs of the database integration.",
+                "Migrated frontend software to a modern framework using C#, JavaScript, .Net Framework, and other evolving technologies."
+            ]
+        },
+        {
+            "org_name": "MEI Technologies Inc.",
+            "title": "Programmer / Analyst",
+            "timespan": "June 2014 - September 2014",
+            "description": [
+                "Performed modeling and simulation to analyze the effectiveness of directed energy weaponry and proposed space situational awareness systems.",
+                "Utilized C++ software package to integrate an energy-propagation physics model with a proven combat-engagement simulation engine."
+            ]
+        }
+    ],
+    "skills": [
+        "C#",
+        "Azure",
+        "Javascript",
+        "Node.js",
+        "Vue.js",
+        "jQuery",
+        "TypeScript",
+        "Python",
+        "CSS",
+        "JSON",
+        "XML"
+    ],
+    "education": [
+        {
+            "name": "University of New Mexico, Albuquerque NM",
+            "certification": "B.S. Physics & B.S. Math",
+            "description": "Graduated May 2014 (received two degrees from same institution)"
+        }
+    ]
+}
