@@ -17,9 +17,11 @@ jobs:
           with:
             path: resume
         - name: run ejs
-          uses: mikeal/npx@master
+          uses: jaywcjlove/action-ejs@main
           with:
-            args: ejs ./template.ejs -f resume_data.json -o resume.html
+            template-file: template.ejs 
+            vars-file: resume_data.json 
+            output: resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:
