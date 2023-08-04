@@ -16,11 +16,16 @@ jobs:
           uses: actions/checkout@v3
           with:
             path: resume
+        - name: get properties
+          id: json_properties
+          uses: ActionsTools/read-json-action@main
+          with:
+            file_path: "resume_data.json"
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
           with:
             template-file: template.ejs 
-            vars-file: resume_data.json 
+            vars: steps.json_properties.outputs
             output: resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
