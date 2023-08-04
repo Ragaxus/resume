@@ -16,6 +16,9 @@ jobs:
           uses: actions/checkout@v3
           with:
             path: resume
+        - name: run ejs
+          uses: mikeal/npx@master
+          args: ejs ./template.ejs -f resume_data.json -o resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:

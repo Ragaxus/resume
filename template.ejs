@@ -11,55 +11,61 @@
         <div class="title">
             <h1><%= header.applicant_name %></h1>
             <div class="contact-info">
-               <% header.contact_info.forEach(element => { %>
+                <% header.contact_info.forEach(element => { %>
                 <%= element %>
-               <% }) %> 
+                <% }) %>
             </div>
             <span><%= header.summary  %></span>
         </div>
     </div>
     <div class="cols">
-        <div class="col col-left">
-            <section>
-                <p class="section-title">Experience</p>
-                <% experience.forEach((xp, xpIdx) => { %>
-                <div class="experience">
-                    <div class="experience-info">
-                        <span class="experience-orgname"><%= xp.org_name %></span>
-                    </div>
-                    <a data-bs-toggle="collapse" href="#xp<%= xpIdx %>">
-                        <div class="experience-duration">
-                            <span class="experience-title"><%= xp.title %></span>
-                            <span class="experience-timespan"><%= xp.timespan %></span>
-                            <div class="caret"></div>
+        <div class="col-sm-6 card-deck m-4">
+            <section class="card p-2">
+                <p class="card-title">Experience</p>
+                <div class="card-text">
+                    <% experience.forEach((xp, xpIdx) => { %>
+                    <div class="experience">
+                        <div class="experience-info">
+                            <span class="experience-orgname"><%= xp.org_name %></span>
                         </div>
-                    </a>
-                    <div class="experience-description collapse" id="xp<%= xpIdx %>">
-                        <ul>
-                            <% xp.description.forEach(xpDesc => { %>
+                        <a data-bs-toggle="collapse" href="#xp<%= xpIdx %>">
+                            <div class="experience-duration">
+                                <span class="experience-title"><%= xp.title %></span>
+                                <span class="experience-timespan"><%= xp.timespan %></span>
+                                <div class="caret"></div>
+                            </div>
+                        </a>
+                        <div class="experience-description collapse" id="xp<%= xpIdx %>">
+                            <ul>
+                                <% xp.description.forEach(xpDesc => { %>
                                 <li> <%= xpDesc %> </li>
-                            <% })%>
-                        </ul>
+                                <% })%>
+                            </ul>
+                        </div>
                     </div>
+                    <% }) %>
                 </div>
-                <% }) %>
             </section>
-            <section>
-                <p class="section-title">Education</p>
-                <% education.forEach(edu => { %>
+            <section class="card mt-2 p-2">
+                <p class="card-title">Education</p>
+                <div class="card-text">
+                    <% education.forEach(edu => { %>
                     <p class="education-info"><%= edu.name %> - <%= edu.certification %></p>
                     <p class="education-description"><%= edu.description %></p>
-                <% }) %>
+                    <% }) %>
+                </div>
             </section>
         </div>
-        <div class="col col-right">
-            <section>
-                <p class="section-title">Skills/Technologies</p>
-                <ul class="skills">
-                    <% skills.forEach(skill => { %>
-                     <li><%= skill %></li>
-                    <% }) %>
-                </ul>
+        <div class="col card-deck m-4">
+            <section class="card p-2">
+                <p class="card-title">Skills/Technologies</p>
+                <div class="card-text">
+                    <ul class="skills">
+                        <% skills.forEach(skill => { %>
+                        <li><%= skill %></li>
+                        <% }) %>
+                    </ul>
+                </div>
             </section>
         </div>
     </div>

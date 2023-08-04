@@ -7,7 +7,7 @@
         "summary": "An affable and analytical engineer with years of success in using legacy code bases to deliver quality software."
     },
     "experience": [{
-            "org_name": "CUNA Mutual",
+            "org_name": "TruStage (formerly CUNA Mutual)",
             "title": "Business System Consultant",
             "timespan": "February 2021 - Present",
             "description": [
@@ -37,17 +37,21 @@
         }
     ],
     "skills": [
-        "C#",
+        "C#/.NET",
         "Azure",
+        "AWS",
         "Javascript",
-        "Node.js",
-        "Vue.js",
+        "Node",
+        "React",
+        "Vue",
         "jQuery",
         "TypeScript",
         "Python",
         "CSS",
         "JSON",
-        "XML"
+        "XML",
+        "SQL",
+        "MongoDB"
     ],
     "education": [
         {

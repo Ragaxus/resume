@@ -8,6 +8,10 @@
     src: url(fonts/Roboto/Roboto-Regular.ttf);
 }
 
+.card-title {
+    --bs-card-title-color: lightseagreen;
+}
+
 body {
     font-family: Roboto-Regular;
     font-size: medium;
