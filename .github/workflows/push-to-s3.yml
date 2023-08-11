@@ -19,9 +19,9 @@ jobs:
             path: resume
         - name: Read data json
           id: read_data
-          uses: jaywcjlove/github-action-read-file@main
+          uses: juliangruber/read-file-action@v1
           with:
-            path: resume_data.json
+            path: ./resume_data.json
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
           with:
