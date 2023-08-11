@@ -1,3 +1,4 @@
+
 name: push-to-s3
 run-name: Push content to S3 bucket
 on:
@@ -16,12 +17,16 @@ jobs:
           uses: actions/checkout@v3
           with:
             path: resume
+        - name: get properties
+          id: json_properties
+          uses: ActionsTools/read-json-action@main
+          with:
+            file_path: "resume/resume_data.json"
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
           with:
             template-file: resume/template.ejs 
-            vars-file: |
-             { "data": "resume/resume_data.json" }
+            vars: ${{ steps.json_properties.outputs }}
             output: resume/resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
@@ -31,3 +36,5 @@ jobs:
             aws-region: us-east-2 # use your region here.
         - name: Serverless deploy
           run: aws s3 sync resume s3://www.stav.gold/resume 
+
+
