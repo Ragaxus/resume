@@ -23,13 +23,13 @@ jobs:
           with:
             path: resume/resume_data.json
         - name: echo
-          run: echo "${{ steps.read_data.outputs }}"
+          run: echo "${{ steps.read_data.outputs.content }}"
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
           with:
             template-file: resume/template.ejs 
             vars: |
-              ${{ steps.read_data.outputs }}
+              ${{ steps.read_data.outputs.content }}
             output: resume/resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
