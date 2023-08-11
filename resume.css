@@ -8,6 +8,13 @@
     src: url(fonts/Roboto/Roboto-Regular.ttf);
 }
 
+@media print {
+    /* your stylesheet for printing, eg.: */
+    .collapse {
+        height: auto !important;
+    }
+}
+
 .card-title {
     --bs-card-title-color: lightseagreen;
 }
@@ -27,17 +34,14 @@ margin-block-end: 5px;
     align-items: center;
     font-size: small;
     margin-bottom: 10px;
+    flex-direction: column;
 }
 
 .header .contact-info {
     margin-bottom: 5px;
 }
 
-.title {
-    width: 450px;
-}
-
-.title span {
+.header span {
     font-style: italic;
 }
 
