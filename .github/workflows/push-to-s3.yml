@@ -20,7 +20,8 @@ jobs:
           uses: jaywcjlove/action-ejs@main
           with:
             template-file: resume/template.ejs 
-            vars-file: resume/resume_data.json
+            vars-file: |
+             { "data": "resume/resume_data.json" }
             output: resume/resume.html
         - name: configure aws credentials
           uses: aws-actions/configure-aws-credentials@v1
