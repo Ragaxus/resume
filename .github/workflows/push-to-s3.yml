@@ -22,8 +22,6 @@ jobs:
           uses: juliangruber/read-file-action@v1
           with:
             path: resume/resume_data.json
-        - name: echo
-          run: echo "${{ steps.read_data.outputs.content }}"
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
           with:
