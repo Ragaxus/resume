@@ -87,3 +87,12 @@ margin-block-end: 5px;
 .skills {
     font-size: small;
 }
+
+.portfolio {
+    font-size: small;
+    display: flex;
+}
+
+.portfolio img {
+    margin-right: 5px;
+}

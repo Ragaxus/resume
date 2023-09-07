@@ -1,4 +1,5 @@
 {
+    "dateUpdated": "2023-09-06",
     "header": {
         "applicant_name": "Stav Gold",
         "contact_info": [
@@ -53,6 +54,7 @@
         "SQL",
         "MongoDB"
     ],
+    "portfolioLink": "https://github.com/Ragaxus",
     "education": [
         {
             "name": "University of New Mexico, Albuquerque NM",

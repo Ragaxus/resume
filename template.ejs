@@ -8,65 +8,72 @@
 
 <body>
     <div class="header mx-auto">
-            <h1><%= header.applicant_name %></h1>
-            <div class="contact-info">
-                <% header.contact_info.forEach(element => { %>
-                <%= element %>
-                <% }) %>
-            </div>
-            <span><%= header.summary  %></span>
+        <h1><%= header.applicant_name %></h1>
+        <div class="contact-info">
+            <% header.contact_info.forEach(element => { %>
+            <%= element %>
+            <% }) %>
+        </div>
+        <span><%= header.summary  %></span>
+        <span>Last updated: <%= dateUpdated %></span>
     </div>
-    <div class="container">
-        <div class="row gx-4">
-        <div class="col-sm-6 card-deck ml-4 mt-4">
-            <section class="card p-2">
-                <p class="card-title">Experience</p>
-                <div class="card-text">
-                    <% experience.forEach((xp, xpIdx) => { %>
-                    <div class="experience">
-                        <div class="experience-info">
-                            <span class="experience-orgname"><%= xp.org_name %></span>
-                        </div>
-                        <a data-bs-toggle="collapse" href="#xp<%= xpIdx %>">
+    <div class="container-fluid">
+        <div class="row gx-3">
+            <div class="col-sm-8 card-deck ml-4 mt-4">
+                <section class="card p-2">
+                    <p class="card-title">Experience</p>
+                    <div class="card-text">
+                        <% experience.forEach((xp, xpIdx) => { %>
+                        <div class="experience">
+                            <div class="experience-info">
+                                <span class="experience-orgname"><%= xp.org_name %></span>
+                            </div>
                             <div class="experience-duration">
                                 <span class="experience-title"><%= xp.title %></span>
                                 <span class="experience-timespan"><%= xp.timespan %></span>
                                 <div class="caret"></div>
                             </div>
-                        </a>
-                        <div class="experience-description collapse" id="xp<%= xpIdx %>">
-                            <ul>
-                                <% xp.description.forEach(xpDesc => { %>
-                                <li> <%= xpDesc %> </li>
-                                <% })%>
-                            </ul>
+                            <div class="experience-description" id="xp<%= xpIdx %>">
+                                <ul>
+                                    <% xp.description.forEach(xpDesc => { %>
+                                    <li> <%= xpDesc %> </li>
+                                    <% })%>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <% }) %>
-                </div>
-            </section>
-            <section class="card mt-2 p-2">
-                <p class="card-title">Education</p>
-                <div class="card-text">
-                    <% education.forEach(edu => { %>
-                    <p class="education-info"><%= edu.name %> - <%= edu.certification %></p>
-                    <p class="education-description"><%= edu.description %></p>
-                    <% }) %>
-                </div>
-            </section>
-        </div>
-        <div class="col card-deck mt-4 ml-2 mr-4">
-            <section class="card p-2">
-                <p class="card-title">Skills/Technologies</p>
-                <div class="card-text">
-                    <ul class="skills">
-                        <% skills.forEach(skill => { %>
-                        <li><%= skill %></li>
                         <% }) %>
-                    </ul>
-                </div>
-            </section>
-        </div>
+                    </div>
+                </section>
+                <section class="card mt-2 p-2">
+                    <p class="card-title">Education</p>
+                    <div class="card-text">
+                        <% education.forEach(edu => { %>
+                        <p class="education-info"><%= edu.name %> - <%= edu.certification %></p>
+                        <p class="education-description"><%= edu.description %></p>
+                        <% }) %>
+                    </div>
+                </section>
+            </div>
+            <div class="col card-deck mt-4 ml-2 mr-4">
+                <section class="card p-2">
+                    <p class="card-title">Skills/Technologies</p>
+                    <div class="card-text">
+                        <ul class="skills">
+                            <% skills.forEach(skill => { %>
+                            <li><%= skill %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </section>
+                <section class="card p-2 mt-2 portfolio">
+                    <a href="<%= portfolioLink %>">
+                        <div>
+                            <img width="30px" height="30px" src="images/github-icon.png" />
+                            My portfolio: https://github.com/Ragaxus
+                        </div>
+                    </a>
+                </section>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
