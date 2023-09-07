@@ -19,7 +19,7 @@ jobs:
             path: resume
         - name: Get current date
           id: date
-          run: echo "::set-output name=date::$(date +'%Y-%m-%d')" 
+          run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT 
         - name: Read data json
           id: file_data
           uses: juliangruber/read-file-action@v1
@@ -30,8 +30,8 @@ jobs:
           uses: actions/github-script@v6
           with:
             script: |
-              var data = steps.file_data.outputs.content; 
-              data.dateUpdated = steps.date.outputs.date;
+              var data = ${{ steps.file_data.outputs.content }}; 
+              data.dateUpdated = ${{ steps.date.outputs.date }};
               return data;
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
