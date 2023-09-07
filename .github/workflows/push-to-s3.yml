@@ -31,7 +31,7 @@ jobs:
           with:
             script: |
               var data = ${{ steps.file_data.outputs.content }}; 
-              data.dateUpdated = ${{ steps.date.outputs.dateUpdated }};
+              data.dateUpdated = "${{ steps.date.outputs.dateUpdated }}";
               return data;
         - name: run ejs
           uses: jaywcjlove/action-ejs@main
