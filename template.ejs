@@ -31,7 +31,6 @@
                             <div class="experience-duration">
                                 <span class="experience-title"><%= xp.title %></span>
                                 <span class="experience-timespan"><%= xp.timespan %></span>
-                                <div class="caret"></div>
                             </div>
                             <div class="experience-description" id="xp<%= xpIdx %>">
                                 <ul>
@@ -48,8 +47,8 @@
                     <p class="card-title">Education</p>
                     <div class="card-text">
                         <% education.forEach(edu => { %>
-                        <p class="education-info"><%= edu.name %> - <%= edu.certification %></p>
-                        <p class="education-description"><%= edu.description %></p>
+                        <div><span class="education-info"><%= edu.name %> - <%= edu.certification %></span></div>
+                        <div><span class="education-description"><%= edu.description %></span></div>
                         <% }) %>
                     </div>
                 </section>
@@ -66,12 +65,10 @@
                     </div>
                 </section>
                 <section class="card p-2 mt-2 portfolio">
-                    <a href="<%= portfolioLink %>">
-                        <div>
-                            <img width="30px" height="30px" src="images/github-icon.png" />
-                            My portfolio: https://github.com/Ragaxus
-                        </div>
-                    </a>
+                    <div>
+                        <p><img width="30px" height="30px" src="images/github-icon.png" />My portfolio:</p>
+                        <p><a href="<%= portfolioLink %>"><%= portfolioLink %></a></p>
+                    </div>
                 </section>
             </div>
         </div>

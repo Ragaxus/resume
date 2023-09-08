@@ -8,13 +8,6 @@
     src: url(fonts/Roboto/Roboto-Regular.ttf);
 }
 
-@media print {
-    /* your stylesheet for printing, eg.: */
-    .collapse {
-        height: auto !important;
-    }
-}
-
 .card-title {
     --bs-card-title-color: lightseagreen;
 }
