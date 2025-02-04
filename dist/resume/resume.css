@@ -30,12 +30,13 @@ h1 {
     flex-direction: column;
 }
 
-.header .contact-info {
+.header>*:not(:last-child) {
     margin-bottom: 5px;
 }
 
 .header span {
     font-style: italic;
+    text-align: center;
 }
 
 .cols {

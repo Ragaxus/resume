@@ -7,19 +7,21 @@
 </head>
 
 <body>
-    <div class="header mx-auto">
-        <h1><%= header.applicant_name %></h1>
-        <div class="contact-info">
-            <% header.contact_info.forEach(element => { %>
-            <%= element %>
-            <% }) %>
+    <div class="container">
+        <div class="header mx-auto">
+            <h1><%= header.applicant_name %></h1>
+            <div class="contact-info">
+                <% header.contact_info.forEach(element => { %>
+                <%= element %>
+                <% }) %>
+            </div>
+            <span id="summary"><%= header.summary  %></span>
+            <span>Last updated: <%= dateUpdated %></span>
         </div>
-        <span><%= header.summary  %></span>
-        <span>Last updated: <%= dateUpdated %></span>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row gx-3">
-            <div class="col-sm-8 card-deck ml-4 mt-4">
+            <div class="col-sm-10 card-deck ml-4 mt-4">
                 <section class="card p-2">
                     <p class="card-title">Experience</p>
                     <div class="card-text">
