@@ -7,14 +7,22 @@
         ],
         "summary": "An affable and analytical engineer with years of success in using legacy code bases to deliver quality software."
     },
-    "experience": [{
-            "org_name": "TruStage (formerly CUNA Mutual)",
+    "experience": [
+        {
+            "org_name": "TruStage (formerly CUNA Mutual) — Shared Services department",
             "title": "Business System Consultant",
             "timespan": "February 2021 - Present",
             "description": [
-                "Support human resources and regulatory compliance functions at a large insurance company.",
-                "Facilitate and modernize ETL of payroll and personnel data to internal and external vended systems.",
-                "Introduced modern development practices to a mature enterprise team; learned how to write cloud-native code and deploy it to Azure by spearheading the team's first-ever such deployment, then trained the rest of the team."
+                "Leading multiple initiatives in a large IT ecosystem (~$12M annual budget) to facilitate and modernize ETL of payroll and personnel data to internal and external vended systems.",
+                "Introduced modern development practices to a mature enterprise team.",
+                "Spearheaded the team's first-ever serverless code project (using Azure Function Apps), which ingested data from a new partner (LPL) into payroll processor.",
+                "* Taught the rest of the team how to work with Function Apps.",
+                "* Helped the team develop a robust set of templates that now form the backbone of the team's contemporary development infrastructure.",
+                "* Grew team's body of knowledge by providing hands-on training to build their own Function App powered projects.",
+                "Built a system to transfer employee data on an automated basis to BluB0X, a brand new security/badging system.",
+                "* Completed the project on time despite scope creep, allowing the opening of a brand new building to proceed without delay. ",
+                "* Coached team on support methodology. Developed documentation that became the team's standard of quality.",
+                "Coordinated knowledge transfer and task assignment for large-scale logistical projects. Managed projects to accelerate their completion timelines and create reference documentation for future endeavors."
             ]
         },
         {
@@ -24,7 +32,7 @@
             "description": [
                 "Built and maintained a database integration between a Finnish healthcare organization and the Finnish national government's patient health information database, in accordance with that nation's regulatory requirements and consultant feedback: grew a strong knowledge of XML.",
                 "Collaborated with developers within the team and without to ensure that the existing legacy system did not experience regressions while also meeting the needs of the database integration.",
-                "Migrated frontend software to a modern framework using C#, JavaScript, .Net Framework, and other evolving technologies."
+                "Migrated frontend software to a modern framework using C#, JavaScript, .NET Framework, and other evolving technologies."
             ]
         },
         {

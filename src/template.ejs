@@ -36,9 +36,20 @@
                             </div>
                             <div class="experience-description" id="xp<%= xpIdx %>">
                                 <ul>
-                                    <% xp.description.forEach(xpDesc => { %>
-                                    <li> <%= xpDesc %> </li>
-                                    <% })%>
+                                    <li> <%= xp.description[0] %>
+                                        <% var subListLevel = 0 %>
+                                        <% xp.description.slice(1).forEach(xpDesc => { %>
+                                        <% if (xpDesc.startsWith("* ")) { %>
+                                        <% if(subListLevel == 0) { subListLevel += 1; %> <ul> <% } %>
+                                            <li> <%= xpDesc.slice(2) %> </li>
+                                            <% } else { %>
+                                            <% if(subListLevel > 0) {subListLevel -= 1; %>
+                                        </ul> <% } %>
+                                    </li>
+                                    <li> <%= xpDesc %>
+                                        <% } %>
+                                        <% })%>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
