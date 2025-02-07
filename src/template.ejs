@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="header mx-auto">
             <h1><%= header.applicant_name %></h1>
             <div class="contact-info">
@@ -15,13 +15,20 @@
                 <%= element %>
                 <% }) %>
             </div>
-            <span id="summary"><%= header.summary  %></span>
+            <span id="summary" class="mt-1">
+                <%= header.summary[0]  %>
+                <% header.summary.slice(1).forEach(headerLine => { %>
+                <p>
+                    <%= headerLine  %>
+                </p>
+                <% }) %>
+            </span>
             <span>Last updated: <%= dateUpdated %></span>
         </div>
     </div>
-    <div class="container">
-        <div class="row gx-3">
-            <div class="col-sm-10 card-deck ml-4 mt-4">
+    <div class="container-fluid">
+        <div class="row g-1">
+            <div class="col-sm-9 card-deck ml-4 mt-4">
                 <section class="card p-2">
                     <p class="card-title">Experience</p>
                     <div class="card-text">
@@ -57,6 +64,40 @@
                     </div>
                 </section>
                 <section class="card mt-2 p-2">
+                    <p class="card-title">Volunteer Work</p>
+                    <div class="card-text">
+                        <% volunteer.forEach((vol, volIdx) => { %>
+                        <div class="volunteer">
+                            <div class="volunteer-info">
+                                <span class="volunteer-orgname"><%= vol.org_name %></span>
+                            </div>
+                            <div class="volunteer-duration">
+                                <span class="volunteer-title"><%= vol.title %></span>
+                                <span class="volunteer-timespan"><%= vol.timespan %></span>
+                            </div>
+                            <div class="volunteer-description" id="vol<%= volIdx %>">
+                                <ul>
+                                    <li> <%= vol.description[0] %>
+                                        <% var subListLevel = 0 %>
+                                        <% vol.description.slice(1).forEach(volDesc => { %>
+                                        <% if (volDesc.startsWith("* ")) { %>
+                                        <% if(subListLevel == 0) { subListLevel += 1; %> <ul> <% } %>
+                                            <li> <%= volDesc.slice(2) %> </li>
+                                            <% } else { %>
+                                            <% if(subListLevel > 0) {subListLevel -= 1; %>
+                                        </ul> <% } %>
+                                    </li>
+                                    <li> <%= volDesc %>
+                                        <% } %>
+                                        <% })%>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </section>
+                <section class="card mt-2 p-2">
                     <p class="card-title">Education</p>
                     <div class="card-text">
                         <% education.forEach(edu => { %>
@@ -66,9 +107,9 @@
                     </div>
                 </section>
             </div>
-            <div class="col card-deck mt-4 ml-2 mr-4">
+            <div class="col-sm-3 card-deck mt-4 ml-2 mr-4">
                 <section class="card p-2">
-                    <p class="card-title">Skills/Technologies</p>
+                    <p class="card-title">Skills</p>
                     <div class="card-text">
                         <ul class="skills">
                             <% skills.forEach(skill => { %>

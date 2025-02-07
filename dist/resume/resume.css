@@ -72,11 +72,37 @@ h1 {
 }
 
 .experience-description ul {
+    font-size: 12px;
+}
+
+.volunteer>span:not(:last-child) {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.volunteer-info {
+    font-size: large;
+}
+
+.volunteer-duration {
     font-size: small;
+    font-style: italic;
+}
+
+.experience-title::after {
+    content: ","
 }
 
 .education-description {
     font-size: small;
+}
+
+.volunteer-title::after {
+    content: ","
+}
+
+.volunteer-description ul {
+    font-size: 12px;
 }
 
 .skills {

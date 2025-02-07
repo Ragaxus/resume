@@ -5,7 +5,10 @@
         "contact_info": [
             "stav.r.gold[at]gmail.com"
         ],
-        "summary": "An affable and analytical engineer with years of success in using legacy code bases to deliver quality software."
+        "summary": [
+            "An affable and analytical engineer with years of success in managing teams to adapt legacy code bases to deliver quality software.",
+            "My teams depend on me to break new ground, deeply understand new technologies and knowledge areas, and give them the tools they need to get the job done."
+        ]
     },
     "experience": [
         {
@@ -15,14 +18,16 @@
             "description": [
                 "Leading multiple initiatives in a large IT ecosystem (~$12M annual budget) to facilitate and modernize ETL of payroll and personnel data to internal and external vended systems.",
                 "Introduced modern development practices to a mature enterprise team.",
-                "Spearheaded the team's first-ever serverless code project (using Azure Function Apps), which ingested data from a new partner (LPL) into payroll processor.",
-                "* Taught the rest of the team how to work with Function Apps.",
-                "* Helped the team develop a robust set of templates that now form the backbone of the team's contemporary development infrastructure.",
-                "* Grew team's body of knowledge by providing hands-on training to build their own Function App powered projects.",
-                "Built a system to transfer employee data on an automated basis to BluB0X, a brand new security/badging system.",
-                "* Completed the project on time despite scope creep, allowing the opening of a brand new building to proceed without delay. ",
+                "* Provided hands-on training and reference implementations of contemporary cloud technology (e.g. Infrastructure As Code pipelines in Azure DevOps, Function Apps) that remains the backbone of the team's development infrastructure to this day.",
                 "* Coached team on support methodology. Developed documentation that became the team's standard of quality.",
-                "Coordinated knowledge transfer and task assignment for large-scale logistical projects. Managed projects to accelerate their completion timelines and create reference documentation for future endeavors."
+                "* Mentored junior staff and helped them skill into their roles. Fostered an attitude of proactive engagement.",
+                "Spearheaded the team's first-ever serverless code project (using Azure Function Apps), which ingested data from a new partner (LPL) into payroll processor. This enabled the capability of selling products with the new partner, preventing a breach of contract and opening new markets via a proliferation of licensed sellers of our products.",
+                "Built a system to transfer employee data on an automated basis to BluB0X, a brand new security/badging system.",
+                "* Completed the project on time despite scope creep, allowing the opening of a brand new building to proceed without delay.",
+                "Coordinated knowledge transfer and task assignment for large-scale logistical projects. Managed projects to accelerate their completion timelines and create reference documentation for future endeavors.",
+                "Led multiple hackathon teams that produced viable proofs of concept and upskilled IT workers across the enterprise.",
+                "Proactively developed learning of domain knowledge when team responsibilities shifted.",
+                "* Our team is now responsible for administering the suite of batch processes that keep data about our represented agents' licensure in sync with RegEd, our vendor system. These programs are also responsible for disseminating updates about said information to various other teams throughout the company who need to be updated on which representatives are able to sell their policies. Our team's knowledge and documentation of these systems is sorely lacking, but I am filling the need by learning what needs to be known and helping the rest of the team figure it out too."
             ]
         },
         {
@@ -30,8 +35,11 @@
             "title": "Software Developer",
             "timespan": "March 2016 - February 2021",
             "description": [
-                "Built and maintained a database integration between a Finnish healthcare organization and the Finnish national government's patient health information database, in accordance with that nation's regulatory requirements and consultant feedback: grew a strong knowledge of XML.",
+                "Built and maintained a database integration between a Finnish healthcare organization and the Finnish national government's patient health information database, in accordance with that nation's regulatory requirements and consultant feedback.",
+                "Interpreted requirements through multiple layers of translation to deliver a software product that Finnish government certified as operable, thereby ensuring a timely go-live without costly delays.",
                 "Collaborated with developers within the team and without to ensure that the existing legacy system did not experience regressions while also meeting the needs of the database integration.",
+                "Learned how to use SOAP paradigm to communicate with Finnish system; trained the rest of the developers.",
+                "Trained the quality assurance staff in the use of various XML validation tools, including XPath.",
                 "Migrated frontend software to a modern framework using C#, JavaScript, .NET Framework, and other evolving technologies."
             ]
         },
@@ -47,11 +55,12 @@
     ],
     "skills": [
         "C#/.NET",
-        "Azure",
+        "Azure (AZ-900 certification)",
         "AWS",
         "Javascript",
         "Node",
         "React",
+        "Bootstrap",
         "Vue",
         "jQuery",
         "TypeScript",
@@ -63,6 +72,18 @@
         "MongoDB"
     ],
     "portfolioLink": "https://github.com/Ragaxus",
+    "volunteer": [
+        {
+            "org_name": "CubeCon",
+            "title": "Operations Lead",
+            "timespan": "May 2024 - present",
+            "description": [
+                "Performed project management duties and provided operational support for one of the largest independent Magic tournaments in the world.",
+                "Tracked various interrelated requirements and ensured that deliverables were produced by different isolated teams on schedule, ensuring that the event was a success.",
+                "Helped write the website (https://cubecon.org); learned React and Bootstrap to do it."
+            ]
+        }
+    ],
     "education": [
         {
             "name": "University of New Mexico, Albuquerque NM",
